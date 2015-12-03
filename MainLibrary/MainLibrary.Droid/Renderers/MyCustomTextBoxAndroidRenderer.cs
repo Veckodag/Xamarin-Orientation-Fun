@@ -25,6 +25,7 @@ namespace MainLibrary.Droid.Renderers
             base.OnElementChanged(e);
             Control?.SetBackgroundColor(global::Android.Graphics.Color.LightGreen);
 
+            // Old sample code taken from somewhere, the code above makes the android entries (textboxes) green.
             //if (Control != null)
             //{
             //    Control.SetHintTextColor(ColorStateList.ValueOf(global::Android.Graphics.Color.White));

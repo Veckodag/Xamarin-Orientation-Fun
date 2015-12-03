@@ -8,6 +8,8 @@ using Xamarin.Forms;
 
 namespace MainLibrary
 {
+    // Orientation is working good. There some code in MainActivity that needs to be uncommented for the
+    // orientation to work
     public class OrientationPage : BaseOrientationPage
     {
         private Label myLabel;

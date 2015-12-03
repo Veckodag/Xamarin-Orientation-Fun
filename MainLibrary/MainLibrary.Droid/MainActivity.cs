@@ -7,8 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using DeviceOrientation.Forms.Plugin.Droid;
+using Xamarin;
 using Xamarin.Forms;
-
+using Application = Android.App.Application;
 namespace MainLibrary.Droid
 {
     [Activity(Label = "MainLibrary", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -24,7 +25,7 @@ namespace MainLibrary.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+            Insights.Initialize("c3073d3e8d28a2b889bdd692f98ece61abfb3090", Application.Context);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             //DeviceOrientationImplementation.Init();
             // Locks the device into portrait mode

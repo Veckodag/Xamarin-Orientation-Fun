@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 namespace MainLibrary
 {
+    //Makes the entry color Mace Windu Light Saber colored
     public class MyCustomTextbox : Entry
     {
         public MyCustomTextbox()

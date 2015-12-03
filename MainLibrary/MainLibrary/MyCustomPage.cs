@@ -30,12 +30,6 @@ namespace MainLibrary
                 HorizontalOptions = LayoutOptions.CenterAndExpand
             };
             //TestingInsightByThrowingACrazyException();
-            LetsWatchThisApplicationCrashHard();
-        }
-
-        private void LetsWatchThisApplicationCrashHard()
-        {
-            LetsWatchThisApplicationCrashHard();
         }
 
         // Will show up in my Xamarin Insights when you run the app as a Divide by zero ex. Pretty nice.

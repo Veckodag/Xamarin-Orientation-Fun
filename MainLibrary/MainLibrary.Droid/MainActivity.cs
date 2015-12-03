@@ -25,14 +25,25 @@ namespace MainLibrary.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            Insights.HasPendingCrashReport += (sender, isStartupCrash)
+                =>
+            {
+                if (isStartupCrash)
+                    Insights.PurgePendingCrashReports().Wait();
+            };
             Insights.Initialize("c3073d3e8d28a2b889bdd692f98ece61abfb3090", Application.Context);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            #region Old Code Related to Device Orientation
             //DeviceOrientationImplementation.Init();
             // Locks the device into portrait mode
             //if (Device.Idiom == TargetIdiom.Phone)
             //{
             //    this.RequestedOrientation = ScreenOrientation.SensorPortrait;
             //}
+            #endregion
+
             LoadApplication(new App());
         }
     }
